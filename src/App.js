@@ -15,7 +15,7 @@ function App() {
 
   const [price,setPrice] = useState(179);
   
-  const [bckg1,setBckg1] = useState('#fff');
+  const [bckg1,setBckg1] = useState('#d7eddd');
   const [bckg2,setBckg2] = useState('#fff');
   const [bckg3,setBckg3] = useState('#fff');
 
