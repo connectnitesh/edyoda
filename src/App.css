@@ -1,38 +1,474 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Roboto:wght@400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --text1: #d9d9d9;
+  --text2: #3c4852;
+  --text3: #bebebe;
+  --text4: #ffffff;
+  --Alert-text1: #de4313;
+  --Alert-fill:linear-gradient(135deg, rgba(222, 67, 19, 0.20) 0%, rgba(222, 67, 19, 0.20) 0.75%, rgba(222, 67, 19, 0.20) 2.92%, rgba(222, 68, 20, 0.20) 6.37%, rgba(223, 69, 21, 0.20) 10.97%, rgba(223, 72, 22, 0.20) 16.59%, rgba(224, 75, 24, 0.20) 23.10%, rgba(225, 80, 27, 0.20) 30.37%, rgba(227, 86, 31, 0.20) 38.27%, rgba(229, 94, 36, 0.20) 46.66%, rgba(231, 104, 43, 0.20) 55.41%, rgba(235, 117, 51, 0.20) 64.39%, rgba(238, 132, 60, 0.20) 73.47%, rgba(243, 149, 71, 0.20) 82.52%, rgba(248, 169, 84, 0.20) 91.41%, rgba(254, 193, 99, 0.20) 100%);--Alert-border: linear-gradient(to bottom right, #de4313, #fec163);
+  --disabled: #e7e7e7;
+  --success: #47ba68;
+  --success2: #d7eddd;
+  --danger1: #f77171;
+  --danger2: #ff0000;
+  --primary1: #0096ff;
+  --primary2: linear-gradient(to bottom right, #0048ff, #0096ff);
+}
+
+body {
+  background: url("./images/bckg.png");
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  background: var(--text4);
+  padding: 10px 60px;
+  position: relative;
+  font-size: 0.9rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+
+.nav-left {
+  display: flex;
+}
+
+.nav-left ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin-left: 50px;
+  align-items: center;
+}
+
+.nav-left ul li a {
+  color: #000;
+}
+
+.nav-right ul {
+  display: flex;
+  position: absolute;
+  right: 60px;
+  top: 15px;
+  gap: 40px;
+}
+
+.nav-right ul li a {
+  color: #000;
+}
+
+.nav-right .joinnow-btn {
+  text-transform: uppercase;
+  padding: 7px 30px;
+  border-radius: 52px;
+  background: var(--primary2);
+  color: var(--text4);
+}
+
+.contents {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  color: var(--text4);
+  min-height: 115vh;
+}
+
+.box1 {
+  padding: 40px 80px;
+}
+
+.box1 h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.3rem;
+}
+
+.box1 h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+}
+
+.box1 h2 .strike {
+  text-decoration: line-through;
+  text-decoration-color: var(--danger2);
+  color: var(--text4);
+}
+
+.box1 h2 span {
+  color: var(--primary1);
+}
+
+.box1 .items {
+  align-items: center;
+  margin: 30px 0;
+  display: flex;
+  gap: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+}
+
+.box1 .items p span {
+  color: var(--primary1);
+  font-weight: 500;
+}
+
+.box2 {
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  right: 40px;
+  background: var(--text4);
+  border-radius: 8px;
+  margin: 40px;
+  margin-bottom: 40px;
+  /* width: 449px; */
+  color: var(--text2);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.circle-btn {
   display: flex;
-  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.circle-btn .circle {
+  display: grid;
+  background: var(--primary1);
+  color: var(--text4);
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.box2 .circle-btn p{
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.box2 h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.box2 .pay-s {
+  display: flex;
+  gap: 50px;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 2px solid var(--text3);
+}
+
+.pay-s label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+.pay-s p span {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.dis {
+  color: var(--text3);
+}
+
+.dis-b {
+  position: relative;
+  background-color: var(--disabled);
+}
+
+.dis-b:before {
+  content: "Offer expired";
+  position: absolute;
+  top: 0;
+  left: 80px;
+  font-size: 0.6rem;
+  background-color: var(--Alert-text1);
+  padding: 2px 20px;
+  border-radius: 0 0 4px 4px;
+  color: var(--text4);
+}
+
+.rec {
+  position: relative;
+}
+
+.rec::before {
+  content: "Recommended";
+  position: absolute;
+  top: 0;
+  left: 80px;
+  font-size: 0.6rem;
+  background-color: var(--success);
+  padding: 2px 20px;
+  border-radius: 0 0 4px 4px;
+  color: var(--text4);
+}
+
+.box2 .line {
+  margin: 0 25px;
+  margin-top: 10px;
+  border: 1px solid var(--text3);
+}
+
+.box2 .pay-t {
+  display: flex;
+  gap: 150px;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.pay-t p {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.pay-t h4 span {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.alert{
+  background: var(--Alert-fill);
+  /* color:var(--Alert-text1); */
+  border:var(--Alert-border);
+}
+
+.pay-u{
+  color:var(--Alert-text1);
+  margin-right:39px;
+}
+
+.pay-u h5 {
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.pay-u p {
+  font-size: 0.8rem;
+}
+
+.pay-u img {
+  margin-right: 5px;
+}
+
+.pay-s .offer-price{
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.btn-box{
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  justify-content: space-evenly;
+}
+
+.btn-box .btn-c {
+  border-radius: 4px;
+  border: 2px solid var(--danger1);
+  cursor: pointer;
+  color: var(--Alert-text1);
+  padding: 10px 55px;
+}
+
+.btn-box .btn-g {
+  cursor: pointer;
+  border-radius: 4px;
+  background: #47ba68;
+  color: var(--text4);
+  padding: 10px 35px;
+}
+
+.rgp-logo {
+  display: grid;
+  cursor: pointer;
+  justify-content: left;
+  padding-bottom: 25px;
+  padding-left: 30px;
+}
+
+.radio-custom {
+  position: absolute;
+  height: 25px;
+  opacity: 0;
+}
+
+.radio-custom,
+.radio-custom-label {
+  display: block;
+  width: 100%;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.radio-custom + .radio-custom-label:before {
+  content: "";
+  border: 2px solid var(--text3);
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  padding: 2px;
+  border-radius: 50%;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.radio-custom:checked + .radio-custom-label:before {
+  content: "✓";
+  background: var(--success);
+  color: var(--text4);
+  text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* large-screen */
+@media screen and (max-width: 1920px) and (min-width:1441px) {
+  .navbar {
+    padding: 10px 60px;
+    font-size: 1.2rem;
+  }
+
+  .navbar .brand{
+    width: 150px;
+  }
+
+  
+.nav-left ul {
+  gap: 80px;
+  margin-left: 80px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.nav-right ul {
+  top:20px;
+  gap: 80px;
+}
+
+  .box1 h3{
+    font-size: 3.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .box1 h2{
+    font-size: 3.8rem;
   }
+
+  .items p{
+    font-size: 2rem;
+  }
+
+  .items img{
+    width:70px;
+  }
+  
+  
+.box2 .circle-btn p{
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.box2 h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.box2{
+  width: max-content;
+}
+
+
+.pay-s label {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 8px;
+  padding:10px;
+}
+
+.pay-s p span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding:10px;
+}
+
+.dis-b:before {
+  font-size: 1rem;
+}
+
+.rec::before {
+  font-size: 1rem;
+}
+
+
+.pay-t p {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.pay-t h4 span {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+
+.pay-u h5 {
+  font-size: 1.3rem;
+}
+
+.pay-u p {
+  font-size: 1.1rem;
+}
+
+.pay-s .offer-price{
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+
+.btn-box .btn-c {
+  font-size: 1.3rem;
+  padding:10px 70px;
+}
+
+.btn-box .btn-g {
+  font-size: 1.3rem;
+  padding: 10px 50px;
+}
+
+
+.rgp-logo {
+  width:150px;
+  padding-bottom: 25px;
+  padding-left: 40px;
+}
+
 }
